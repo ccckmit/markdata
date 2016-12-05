@@ -1,6 +1,6 @@
 {
   "name": "markdata",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An extension for markdown that support table, object, and mongodb",
   "main": "markdata.js",
   "dependencies": {
