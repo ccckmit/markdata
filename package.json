@@ -1,0 +1,35 @@
+{
+  "name": "markdata",
+  "version": "0.0.1",
+  "description": "An extension for markdown that support table, object, and mongodb",
+  "main": "markdata.js",
+  "dependencies": {
+    "co": "^4.6.0",
+    "mongodb": "^2.2.12"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0"
+  },
+  "scripts": {
+    "build-web": "browserify web/_markdata.js -o web/markdata.js"
+  },
+  "bin": {},
+  "keywords": [
+    "markdown",
+    "mongodb",
+    "JSON",
+    "CSV",
+    "XML"
+  ],
+  "homepage": "https://github.com/ccckmit/markdata",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ccckmit/markdata.git"
+  },
+  "author": {
+    "name": "Chung-Chen Chen",
+    "email": "ccckmit@gmail.com",
+    "url": "http://ccc.nqu.edu.tw"
+  },
+  "license": "MIT"
+}
