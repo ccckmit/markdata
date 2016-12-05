@@ -128,9 +128,16 @@ co(function*() {
 		yield table.update(list[i], list[i], {upsert:true});
 	}
 	yield table.ensureIndex({"$**":"text"}, {name:"FullTextIndex"});
-  var items = yield table.find({$text:{$search:"Jobs"}}).toArray();
-  console.log("items=%j", items);
   var result = yield db.close();
 });
 }
 
+M.queryMongodb = function(dbName, tableName, query) {
+co(function*() {
+  var db = yield MongoClient.connect('mongodb://localhost:27017/'+dbName);
+  var table = db.collection(tableName);
+  var items = yield table.find(query).toArray();
+  console.log("items=%j", items);
+  var result = yield db.close();
+});
+}
